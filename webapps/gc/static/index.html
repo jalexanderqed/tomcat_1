@@ -1,0 +1,192 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+
+<html>
+    <head>
+        <meta content="text/html;">  
+        <title>Happy Birthday</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <style>
+            body{
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: auto;
+                margin-top: auto;
+                background-color: #FFFFE9;
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: auto;
+                margin-top: auto;
+            }
+            button{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: auto;
+                margin-top: auto;
+                width: 100;
+            }
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            tr{
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+            td{
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+            p{
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                text-align: center;
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <br>
+        <div id="first">
+            <img id="happy_birthday" src="images/birthday.jpg" alt="Happy Birthday" style="width:500px;height:auto">
+        </div>
+        <div style="display:none;" id="second">
+            <table>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="bikeb">The Bike</button>
+                        <div class="computinginfo" style="display:none;">
+                            <img src="images/emacs.png" alt="Emacs" style="width:350px;height:auto">
+                        </div>
+                        <div class="bikeinfo" style="display:none;">
+                            <img src="images/bike.jpg" alt="Picture of Jack's bike" style="width:350px;height:auto">
+                        </div>
+                        <div class="hikeinfo" style="display:none;">
+                            <img src="images/hiking.jpg" alt="Picture of Jack hiking" style="width:350px;height:auto">
+                        </div>
+                        <div class="locationinfo" style="display:none;">
+                            <img src="images/ucsb.jpg" alt="Picture of UCSB" style="width:350px;height:auto">
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="hikeb">The Hiking</button>
+                    </td>
+                    <td>
+                        <img id="thank_you" src="images/thankyou.jpg" alt="Thank You" style="width:100px;height:auto;display:none;">
+                        <img id="thankful" src="images/thankful.jpg" alt="Thankful" style="width:500px;height:auto">
+                    </td>
+                    <td>
+                        <button id="computingb">The Computers</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="locationb">The College</button>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="computinginfo" style="display:none;">
+                <p>For introducing me to the skills that ultimately allowed me to write this web page from scratch, which I started doing in the text editor that you taught me to use (and will still answer random questions about at 8:30 at night).</p>
+            </div>
+            <div class="bikeinfo" style="display:none;">
+                <p>For giving me the ability to repair, service, and maintain this bike (and several others too) with my own hands instead of needing somebody else's (although yours are always nice to work with).</p>
+            </div>
+            <div class="hikeinfo" style="display:none;">
+                <p>For introducing me to the most exhilarating activity in the world, which has allowed me to experience more beauty in my life than anything else.</p>
+            </div>
+            <div class="locationinfo" style="display:none;">
+                <p>For taking me, many years ago, to this wonderful place, and then allowing me to live some of the most exciting (if stressful) years of my life here.</p>
+            </div>
+            <br>
+            <button id="resetbutton" style="display:none">Back</button>
+            <br><br>
+        </div>
+        <script>
+            var delay = 1000;
+            $("#first").delay(5000).fadeOut(delay, function () {
+                $("#first").hide();
+                $("#second").fadeIn(delay);
+                $("body").css("background-color", "white");
+            });
+
+            $("#bikeb").click(function () {
+                fadeMainOut();
+                $("#thank_you").delay(delay).fadeIn(delay);
+                $("#resetbutton").delay(delay).fadeIn(delay);
+                $(".bikeinfo").delay(delay).fadeIn(delay);
+            });
+
+            $("#computingb").click(function () {
+                fadeMainOut();
+                $("#thank_you").delay(delay).fadeIn(delay);
+                $("#resetbutton").delay(delay).fadeIn(delay);
+                $(".computinginfo").delay(delay).fadeIn(delay);
+            });
+
+            $("#hikeb").click(function () {
+                fadeMainOut();
+                $("#thank_you").delay(delay).fadeIn(delay);
+                $("#resetbutton").delay(delay).fadeIn(delay);
+                $(".hikeinfo").delay(delay).fadeIn(delay);
+            });
+
+            $("#locationb").click(function () {
+                fadeMainOut();
+                $("#thank_you").delay(delay).fadeIn(delay);
+                $("#resetbutton").delay(delay).fadeIn(delay);
+                $(".locationinfo").delay(delay).fadeIn(delay);
+            });
+
+            $("#resetbutton").click(function () {
+                fadeAllOut();
+                fadeMainIn();
+            });
+
+            function fadeMainOut() {
+                $("#bikeb").fadeOut(delay);
+                $("#computingb").fadeOut(delay);
+                $("#hikeb").fadeOut(delay);
+                $("#locationb").fadeOut(delay);
+                $("#thankful").fadeOut(delay);
+            }
+
+            function fadeMainIn() {
+                $("#bikeb").delay(delay).fadeIn(delay);
+                $("#computingb").delay(delay).fadeIn(delay);
+                $("#hikeb").delay(delay).fadeIn(delay);
+                $("#locationb").delay(delay).fadeIn(delay);
+
+                $("#thankful").delay(delay).fadeIn(delay);
+            }
+
+            function fadeAllOut() {
+                $(".bikeinfo").fadeOut(delay);
+                $(".computinginfo").fadeOut(delay);
+                $(".hikeinfo").fadeOut(delay);
+                $(".locationinfo").fadeOut(delay);
+
+                $("#resetbutton").fadeOut(delay);
+                $("#thankful").fadeOut(delay);
+                $("#thank_you").fadeOut(delay);
+            }
+        </script>
+    </body>
+</html>
